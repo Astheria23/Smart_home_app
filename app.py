@@ -22,9 +22,12 @@ def setLed(state):
         return ('Unknown state', 400)
     return 'LED state set successfully'
 
-@app.route('/monitor')
-def test():
-          return render_template('index.html')
+@app.route('/login')
+def login():
+    return render_template('login.html')
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)
